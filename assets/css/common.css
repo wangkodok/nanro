@@ -303,3 +303,74 @@ button:hover .word-split_textAnimation [class^="t"] {
 .word-split_text .t12, .word-split_textAnimation .t12 {--i: 11;}
 .word-split_text .t13, .word-split_textAnimation .t13 {--i: 12;}
 .word-split_text .t14, .word-split_textAnimation .t14 {--i: 13;}
+
+/* section 제목 타이틀 */
+.sec-title {
+  font-size: 1.625rem;
+  font-family: "CormorantInfant";
+  font-weight: 500;
+  color: #666;
+}
+
+.ff {
+  font-family: "CormorantInfant";
+}
+
+/* 가로 텍스트 애니메이션 */
+.ah-area {
+  /* overflow: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 14vw);
+  z-index: 1;
+}
+
+.animation-horizontal {
+  position: absolute;
+  bottom: 255px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  /* margin-bottom: 200px; */
+}
+
+.animation-horizontal .wrap {
+  display: flex;
+  margin-left: -700px;
+}
+
+.animation-horizontal .wrap .text {
+  width: 700px;
+  padding: 40px;
+  margin: 0;
+  font-family: var(--font-Montserrat);
+  font-size: 192px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  animation: animationHorizontal 7s linear infinite running;
+}
+
+@media screen and (max-width: 100rem) {
+  .animation-horizontal {
+    bottom: 300px;
+  }
+
+  .animation-horizontal .wrap .text {
+    font-size: 100px;
+  }
+}
+
+@keyframes animationHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/swiper.css">
   <link rel="stylesheet" href="./assets/css/common.css">
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <title>제목</title>
 </head>
 
@@ -234,9 +236,97 @@
         </button>
       </div>
     </header>
-    <main></main>
+
+    <main id="contents" class="main">
+      <section class="sec-visual">
+        <div class="main_slide swiper-container slider-visual">
+          <ul class="swiper-wrapper slider-list">
+            <li class="swiper-slide slider-item">
+              <div class="slide-inner" data-swiper-parallax-x="80%">
+                <!-- <div> -->
+                <figure>
+                  <img src="./assets/image/slider_feast.jpg" alt>
+                </figure>
+                <!-- </div> -->
+                <div class="title-area">
+                  <h2 class="sec-title">
+                    <span class="blind">난로의 잔치</span>
+                    (NANRO Feast)
+                  </h2>
+                  <p class="sec-desc">한국의 미술과 음식에 담긴 풍류</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide slider-item">
+              <div class="slide-inner" data-swiper-parallax-x="80%">
+                <!-- <div> -->
+                <figure>
+                  <img src="./assets/image/slider_insight.jpg" alt>
+                </figure>
+                <!-- </div> -->
+                <div class="title-area">
+                  <h2 class="sec-title">
+                    <span class="blind">난로의 통찰력</span>
+                    (NANRO Insight)
+                  </h2>
+                  <a href="" class="link-desc">
+                    <p class="sec-desc">비비고 브랜딩과 해외 진출 비하인드</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide slider-item">
+              <div class="slide-inner" data-swiper-parallax-x="80%">
+                <!-- <div> -->
+                <figure>
+                  <img src="./assets/image/slider_academy.jpg" alt>
+                </figure>
+                <!-- </div> -->
+                <div class="title-area">
+                  <h2 class="sec-title">
+                    <span class="blind">난로의 아카데미</span>
+                    (NANRO Academy)
+                  </h2>
+                  <a href="" class="link-desc">
+                    <p class="sec-desc">서울에서 접하기 힘든 통영의 맛, 겨울</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-slider-control">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-area">
+              <button class="swiper-button-prev">
+                <span class="blind">이전 슬라이드</span>
+              </button>
+              <button class="swiper-button-next">
+                <span class="blind">다음 슬라이드</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="ah-area"> -->
+        <div class="animation-horizontal">
+          <div class="wrap">
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+            <span class="text" aria-hidden="true">NANRO</span>
+          </div>
+        </div>
+        <!-- </div> -->
+      </section>
+    </main>
     <footer></footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script src="./assets/js/swiper.js"></script>
   <script src="./assets/js/gsap.js"></script>
