@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/PretendardVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "CormorantInfant";
+  src: url("../font/CormorantInfant-MediumItalic.woff2") format("woff2");
+}
