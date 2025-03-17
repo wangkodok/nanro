@@ -187,4 +187,34 @@ window.addEventListener("load", function () {
     imgWrap("#img-wrap_2 img");
     imgWrap("#img-wrap_4 img");
   }, 2000);
+
+  // 푸터 영역 버튼 클릭
+  const footerCopyButton = document.querySelector(".footer .nanro-info .copy-button");
+  const address = document.querySelector(".footer .address-area");
+  footerCopyButton.addEventListener("click", () => {
+    if (address.classList.contains("active")) {
+      footerCopyButton.classList.remove("active");
+      address.classList.remove("active");
+    } else {
+      footerCopyButton.classList.add("active");
+      address.classList.add("active");
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  });
+
+  function click() {
+    const clickElement = document.querySelector(".footer .language-area");
+    clickElement.addEventListener("click", () => {
+      if (clickElement.classList.contains("active")) {
+        clickElement.classList.remove("active");
+      } else {
+        clickElement.classList.add("active");
+      }
+    });
+  }
+
+  click();
 });
