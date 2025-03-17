@@ -217,4 +217,44 @@ window.addEventListener("load", function () {
   }
 
   click();
+
+  // 마우스 커서
+  const cursor = document.querySelector(".cursor");
+  const cursorMore = document.querySelector(".cursor-more");
+  const postItem = this.document.querySelectorAll(".sec-post .post-item .link");
+  
+
+  function cursorMouseMove(e) {
+    if (e.isTrusted === true) {
+      const mouseX = e.pageX;
+      const mouseY = e.pageY;
+
+      // cursor.style.width = "10px";
+      // cursor.style.height = "10px";
+      // cursor.style.display = "block";
+      
+      cursor.style.top = (mouseY - document.documentElement.scrollTop) + "px";
+      cursor.style.left = (mouseX - document.documentElement.scrollLeft) + "px";
+
+      // cursorMore.style.width = "100px";
+      // cursorMore.style.height = "100px";
+      // // cursorMore.style.display = "flex";
+      // cursorMore.style.top = (mouseY - document.documentElement.scrollTop) + "px";
+      // cursorMore.style.left = (mouseX - document.documentElement.scrollLeft) + "px";
+    }
+  }
+  
+  document.addEventListener("mousemove", cursorMouseMove);
+
+  for (let i = 0; i < postItem.length; i++) {
+    postItem[i].addEventListener("mouseenter", () => {
+      // cursorMore.classList.add("active");
+      cursor.classList.add("active");
+    });
+    
+    postItem[i].addEventListener("mouseleave", () => {
+      // cursorMore.classList.remove("active");
+      cursor.classList.remove("active");
+    });
+  }
 });

@@ -1,5 +1,48 @@
 @charset "utf-8";
 
+/* 마우스 커서 */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  transform: translate(-100%, -100%);
+  z-index: 999999;
+  /* display: none; */
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.cursor.active {
+  width: 100px;
+  height: 100px;
+  transform: translate(0, 0);
+  transition: all .1s ease-out;
+  opacity: 1;
+}
+
+.cursor.active::after {
+  content: "more";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  border-radius: 999px;
+}
+
 /* 헤더 영역 공통 스타일 */
 [class*="word-split_"] {
   display: flex;
