@@ -464,3 +464,143 @@
   box-shadow: none;
   background-size: 100% 1px;
 }
+
+/* NANRO in Press 영역 */
+.sec-post {
+  padding-top: 160px;
+}
+
+.sec-post .inner {
+  padding: 0 40px;
+}
+
+.sec-post .inner .sec-title {
+  margin-bottom: 25px;
+}
+
+.sec-post .post-list {
+  position: relative;
+  display: flex;
+  margin-left: -40px;
+  margin-right: -40px;
+  /* transform: translateX(-40px); */
+  /* width: calc(100% + 80px); */
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-post .post-list {
+    display: block;
+  }
+}
+
+.sec-post .post-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: calc(100% - 80px);
+  height: 1px;
+  transform: translateX(40px);
+  background-color: #000;
+}
+
+.sec-post .post-item {
+  position: relative;
+  width: calc(100% / 3);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-post .post-item {
+    width: calc(100% / 1);
+  }
+}
+
+.sec-post .post-item:last-child .line {
+  display: none;
+}
+
+.sec-post .post-item .line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-post .post-item .line {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 80px);
+    height: 1px;
+    transform: translateX(-40px);
+  }
+}
+
+.sec-post .post-item .link {
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.sec-post .post-item.animation .link {
+  opacity: 1;
+}
+
+.sec-post .post-item img {
+  width: 100%;
+}
+
+.sec-post .post-item .desc-wrap {
+  margin: 30px 0 80px;
+  font-size: 2rem;
+  display: -webkit-box;
+  line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #fff;
+  word-break: keep-all;
+  height: 86px;
+  line-height: 1.35;
+}
+
+.sec-post .post-item .desc {
+  display: inline;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  background-size: 0 2px;
+  transition: background-size 0.3s ease-out;
+}
+
+.sec-post .link:hover .desc {
+  background-size: 100% 2px;
+}
+
+.sec-post .post-item dl {
+  display: flex;
+  font-size: 1.125rem;
+  color: #666;
+}
+
+.sec-post .post-item .name {
+  position: relative;
+  padding-left: 16px;
+}
+
+.sec-post .post-item .name::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2px;
+  background-color: #666;
+  border-radius: 999px;
+}
