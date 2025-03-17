@@ -280,3 +280,187 @@
     width: 100%;
   }
 }
+
+/* What We Do 영역 */
+.sec-list {
+  padding-top: 160px;
+}
+
+.sec-list .inner {
+  padding: 0 40px;
+}
+
+.sec-list .sec-title {
+  margin-bottom: 25px;
+}
+
+.sec-list .accordion-list {
+  position: relative;
+}
+
+.sec-list .accordion-list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.sec-list .accordion-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  opacity: 0.3;
+}
+
+.sec-list .accordion-item.animation {
+  opacity: 1;
+}
+
+.sec-list .accordion-item .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  opacity: 0.1;
+}
+
+.sec-list .accordion-item .line.active {
+  transform: translateX(-100%);
+  transition: transform 0.8s ease 0.2s;
+}
+
+.sec-list .accordion-item.animation .line.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sec-list .accordion-item .button-area {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 3.125rem 0;
+  font-size: 7.125rem;
+}
+
+@media screen and (max-width: 100rem) {
+  .sec-list .accordion-item .button-area {
+    font-size: 6.25rem;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-list .accordion-item .button-area {
+    padding: 1.375rem 0;
+    font-size: 4.375rem;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .sec-list .accordion-item .button-area {
+    padding: 1.375rem 0;
+    font-size: 2.25rem;
+  }
+}
+
+.sec-list .accordion-item .arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 60px;
+  height: 72px;
+  transform: translateY(-50%) rotate(0);
+  transition: transform 0.5s ease;
+  background: url("../image/arrow.svg") no-repeat center / contain;
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-list .accordion-item .arrow {
+    width: 40px;
+    height: 52px;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .sec-list .accordion-item .arrow {
+    width: 20px;
+    height: 32px;
+  }
+}
+
+.sec-list .accordion-item.active .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.sec-list .contents-area {
+  visibility: hidden;
+  height: 0;
+  transition: all 0.5s ease;
+}
+
+.sec-list .contents-area .contents-detail {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3.125rem;
+}
+
+.sec-list .contents-area figure {
+  width: 304px;
+  height: 203px;
+}
+
+.sec-list .contents-area img {
+  width: 100%;
+}
+
+.sec-list .contents-area .text-area {
+  padding-left: 2.5rem;
+}
+
+@media screen and (max-width: 60rem) {
+  .sec-list .contents-area .contents-detail {
+    display: block;
+  }
+
+  .sec-list .contents-area figure {
+    width: 100%;
+    height: auto;
+  }
+
+  .sec-list .contents-area .text-area {
+    padding: 1.875rem 0 0 0;
+  }
+}
+
+.sec-list .contents-area .title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.sec-list .contents-area .desc {
+  font-size: 1.25rem;
+  padding: 1.75rem 0;
+}
+
+.sec-list .contents-area .link-more {
+  font-size: 1.25rem;
+  box-shadow: inset 0 -1px #666;
+  -webkit-box-shadow: inset 0 -1px #666;
+  background-image: linear-gradient(#000, #000);
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  background-size: 0% 1px;
+  transition: background-size .5s, -webkit-box-shadow .1s ease-out;
+  transition: box-shadow .1s, background-size .5s;
+  transition: box-shadow .1s, background-size .5s, -webkit-box-shadow .1s;
+  -webkit-transition: background-size .5s, -webkit-box-shadow .1s;
+}
+
+.sec-list .contents-area .link-more:hover {
+  box-shadow: none;
+  background-size: 100% 1px;
+}

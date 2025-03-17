@@ -97,6 +97,45 @@ window.addEventListener("load", function () {
   scrollAppear(); // 해당하는 섹션에서 새로 고침하면 실행
   window.addEventListener("scroll", scrollAppear);
 
+  // What We Do 아코디언 메뉴
+  function accordionList() {
+    const list = document.querySelectorAll(".accordion-item");
+  
+    function updateHeight() {
+      list.forEach((item) => {
+        const contentArea = item.querySelector(".contents-area");
+        if (contentArea.style.visibility === "visible") {
+          const height = item.querySelector(".contents-detail").offsetHeight;
+          contentArea.style.height = `${height}px`;
+        }
+      });
+    }
+  
+    list.forEach((item) => {
+      item.addEventListener("click", () => {
+        list.forEach((el) => {
+          el.querySelector(".contents-area").style.height = "0px";
+          el.querySelector(".contents-area").style.visibility = "hidden";
+          el.classList.remove("active")
+        });
+  
+  
+        const contentArea = item.querySelector(".contents-area");
+        const height = item.querySelector(".contents-detail").offsetHeight;
+        contentArea.style.height = `${height}px`;
+        contentArea.style.visibility = "visible";
+  
+        if (contentArea.style.visibility === "visible") {
+          item.classList.add("active")
+        }
+      });
+    });
+  
+    window.addEventListener("resize", updateHeight);
+  }
+  
+  accordionList();
+
   // 스크롤 시 애니메이션 후 이미지 슬라이더
   function imgWrap(imgElement) {
     const img = document.querySelectorAll(imgElement);
