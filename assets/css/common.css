@@ -19,6 +19,48 @@
   text-shadow: none;
 }
 
+/* 로고 인트로 */
+body .loading-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  background-color: #fff;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.7s ease;
+}
+
+body .loading-bar .logo-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25vw;
+}
+
+body .loading-bar.off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+body .header,
+body .main,
+body .footer {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* 마우스 커서 */
 .cursor {
   position: fixed;
