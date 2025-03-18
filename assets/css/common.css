@@ -1,5 +1,24 @@
 @charset "utf-8";
 
+/* 드래그 */
+::selection {
+  color: #000;
+  background: #d6d6d6;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  color: #000;
+  background: #d6d6d6;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  color: #000;
+  background: #d6d6d6;
+  text-shadow: none;
+}
+
 /* 마우스 커서 */
 .cursor {
   position: fixed;
