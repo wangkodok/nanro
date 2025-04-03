@@ -233,7 +233,7 @@
             </li>
           </ul>
         </nav>
-        <button class="button-search">
+        <button class="button-search" type="button">
           <span class="blind">검색하기</span>
           <span class="split_textArea">
             <span class="word-split_text">
@@ -254,7 +254,7 @@
             </span>
           </span>
         </button>
-        <button class="button-menu">
+        <button class="button-menu" type="button">
           <span class="blind">전체 메뉴</span>
           <span class="split_textArea">
             <span class="word-split_text">
@@ -280,7 +280,7 @@
             <span class="blind">검색</span>
           </button>
         </form>
-        <button class="button-close">
+        <button class="button-close" type="button">
           <span class="blind">검색닫기</span>
           <span class="split_textArea">
             <span class="word-split_text">
@@ -356,10 +356,10 @@
           <div class="swiper-slider-control">
             <div class="swiper-pagination"></div>
             <div class="swiper-button-area">
-              <button class="swiper-button-prev">
+              <button class="swiper-button-prev" type="button">
                 <span class="blind">이전 슬라이드</span>
               </button>
-              <button class="swiper-button-next">
+              <button class="swiper-button-next" type="button">
                 <span class="blind">다음 슬라이드</span>
               </button>
             </div>
@@ -385,22 +385,22 @@
         <div class="inner">
           <h2 class="sec-title">(Who We Are)</h2>
           <div class="word-area">
-            <span>우리는 한식문화의</span>
+            <span aria-hidden="true">우리는 한식문화의</span>
             <span class="img-area">
               <span id="img-wrap_1" class="img-wrap">
                 <img src="./assets/image/slogan-img-1-1.jpg" alt="">
                 <img src="./assets/image/slogan-img-1-2.jpg" alt="">
               </span>
             </span>
-            <span>고유성에서</span>
-            <span>글로벌</span>
+            <span aria-hidden="true">고유성에서</span>
+            <span aria-hidden="true">글로벌</span>
             <span class="img-area">
               <span id="img-wrap_2" class="img-wrap">
                 <img src="./assets/image/slogan-img-2-1.jpg" alt="">
                 <img src="./assets/image/slogan-img-2-2.jpg" alt="">
               </span>
             </span>
-            <span>
+            <span aria-hidden="true">
               한식<i class="ff" aria-hidden="true">(Hansik)</i>의
             </span>
             <span class="img-area">
@@ -409,14 +409,14 @@
                 <img src="./assets/image/slogan-img-3-2.jpg" alt="">
               </span>
             </span>
-            <span>미래를</span>
+            <span aria-hidden="true">미래를</span>
             <span class="img-area">
               <span id="img-wrap_4" class="img-wrap">
                 <img src="./assets/image/slogan-img-4-1.jpg" alt="">
                 <img src="./assets/image/slogan-img-4-2.jpg" alt="">
               </span>
             </span>
-            <span>찾습니다</span>
+            <span aria-hidden="true">찾습니다</span>
           </div>
           <div class="link-more">
             <a href="">자세히보기</a>
@@ -447,8 +447,8 @@
                   </div>
                 </div>
               </div>
-              <div class="line"></div>
-              <div class="line active"></div>
+              <div class="line" role="presentation"></div>
+              <div class="line active" role="presentation"></div>
             </li>
             <li id="tab2" class="accordion-item" role="tab" aria-controls="tab-panel2" aria-expanded="false">
               <button class="button-area" type="button">
@@ -470,8 +470,8 @@
                   </div>
                 </div>
               </div>
-              <div class="line"></div>
-              <div class="line active"></div>
+              <div class="line" role="presentation"></div>
+              <div class="line active" role="presentation"></div>
             </li>
             <li id="tab3" class="accordion-item" role="tab" aria-controls="tab-panel3" aria-expanded="false">
               <button class="button-area" type="button">
@@ -493,10 +493,10 @@
                   </div>
                 </div>
               </div>
-              <div class="line"></div>
-              <div class="line active"></div>
+              <div class="line" role="presentation"></div>
+              <div class="line active" role="presentation"></div>
             </li>
-            <li class="accordion-item" role="tab" aria-controls="tab-panel_1">
+            <li id="tab4" class="accordion-item" role="tab" aria-controls="tab-panel4" aria-expanded="false">
               <button class="button-area" type="button">
                 <span>NANRO</span>
                 <span class="ff">ACADEMY</span>
@@ -516,8 +516,8 @@
                   </div>
                 </div>
               </div>
-              <div class="line"></div>
-              <div class="line active"></div>
+              <div class="line" role="presentation"></div>
+              <div class="line active" role="presentation"></div>
             </li>
           </ul>
         </div>
@@ -591,7 +591,7 @@
       <div class="inner">
         <div class="layout-wrap">
           <div class="nanro-info">
-            <button class="copy-button">
+            <button class="copy-button" type="button">
               © NANRO.
               <span class="blind">회사 정보 보기</span>
             </button>
@@ -630,7 +630,7 @@
               </li>
             </ul>
             <div class="language-area">
-              <button class="language-button">
+              <button class="language-button" type="button">
                 <span class="text">KO</span>
                 <span class="blind">페이지 언어 변경</span>
               </button>
