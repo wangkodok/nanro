@@ -117,6 +117,7 @@ window.addEventListener("load", function () {
           el.querySelector(".contents-area").style.height = "0px";
           el.querySelector(".contents-area").style.visibility = "hidden";
           el.classList.remove("active")
+          el.setAttribute("aria-expanded", "false");
         });
   
   
@@ -127,6 +128,7 @@ window.addEventListener("load", function () {
   
         if (contentArea.style.visibility === "visible") {
           item.classList.add("active")
+          item.setAttribute("aria-expanded", "true");
         }
       });
     });
