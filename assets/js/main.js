@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
   close.addEventListener("click", () => {
     if (!clickElement.classList.contains("active")) {
       formSearchArea.classList.remove("active");
+      close.classList.remove("active");
     } else {
       formSearchArea.classList.add("active");
       close.classList.add("active");

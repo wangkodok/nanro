@@ -170,10 +170,10 @@ body .footer {
 }
 
 .header {
+  overflow: hidden;
   position: absolute;
   top: 0;
   z-index: 100000;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 5.375rem;
@@ -182,25 +182,21 @@ body .footer {
   background-color: #fff;
 }
 
+.header-inner {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  height: 100%;
+}
+
 @media screen and (max-width: 959px) {
   .header {
     height: 4.25rem;
   }
 }
 
-.gnb-wrap {
-  display: flex;
-  position: relative;
-  position: absolute;
-  top: 0;
-  right: 0;
-  align-items: center;
-  height: 100%;
-}
-
 .gnb-nav {
   height: 100%;
-  padding: 0 2.5rem;
   font-size: 1.25rem;
 }
 
@@ -214,6 +210,7 @@ body .footer {
   display: flex;
   align-items: center;
   height: 100%;
+  padding: 0 2.5rem;
 }
 
 .gnb-nav .item {
@@ -307,52 +304,51 @@ body .footer {
   border-left: 1px solid #000;
 }
 
-.form-search-area {
-  visibility: hidden;
-  overflow: hidden;
+.button-close {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  left: auto;
   z-index: -1;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.button-close.active {
+  display: block;
+  z-index: 2;
+}
+
+.form-search-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
   width: 50%;
   height: 100%;
   background-color: #fff;
+  padding-right: 8vw;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
 }
 
 .form-search-area.active {
-  display: flex;
-  visibility: visible;
-  z-index: 1;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 form {
   display: flex;
-  position: relative;
-  z-index: -1;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100% - 154px);
   height: 100%;
   border-left: 1px solid #000;
-  background-color: #fff;
-  transform: translateX(100%);
-  transition: all 0.5s ease;
-}
-
-.form-search-area.active form {
-  transform: translateX(0);
 }
 
 form .form-input {
-  width: calc(100% - 60px);
-  padding: 10px 40px;
-  border: none;
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
+  width: 100%;
+  padding-right: 75px;
+  padding-left: 40px;
+  font-size: 1.25rem;
 }
 
 form .form-button {

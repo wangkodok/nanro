@@ -85,10 +85,10 @@
     </div>
 
     <header id="top" class="header">
-      <a href="" class="logo">
-        <span class="blind">난로</span>
-      </a>
-      <div class="gnb-wrap">
+      <div class="header-inner">
+        <a href="" class="logo">
+          <span class="blind">난로</span>
+        </a>
         <nav class="gnb-nav">
           <span class="blind">대메뉴</span>
           <ul class="list">
@@ -236,27 +236,57 @@
             </li>
           </ul>
         </nav>
-        <button class="button-search" type="button">
-          <span class="blind">검색하기</span>
-          <span class="split_textArea">
-            <span class="word-split_text">
-              <span class="t01 capital-letter">s</span>
-              <span class="t02">e</span>
-              <span class="t03">a</span>
-              <span class="t04">r</span>
-              <span class="t05">c</span>
-              <span class="t06">h</span>
+        <div class="search-wrap">
+          <button class="button-search" type="button">
+            <span class="blind">검색하기</span>
+            <span class="split_textArea">
+              <span class="word-split_text">
+                <span class="t01 capital-letter">s</span>
+                <span class="t02">e</span>
+                <span class="t03">a</span>
+                <span class="t04">r</span>
+                <span class="t05">c</span>
+                <span class="t06">h</span>
+              </span>
+              <span class="word-split_textAnimation">
+                <span class="t01 capital-letter">s</span>
+                <span class="t02">e</span>
+                <span class="t03">a</span>
+                <span class="t04">r</span>
+                <span class="t05">c</span>
+                <span class="t06">h</span>
+              </span>
             </span>
-            <span class="word-split_textAnimation">
-              <span class="t01 capital-letter">s</span>
-              <span class="t02">e</span>
-              <span class="t03">a</span>
-              <span class="t04">r</span>
-              <span class="t05">c</span>
-              <span class="t06">h</span>
+          </button>
+          <div class="form-search-area">
+            <form action="/" class="search-form" role="search">
+              <label for="form-connection" class="blind">검색어</label>
+              <input type="search" id="form-connection" name="query" class="form-input" value="" placeholder="검색어를 입력해주세요.">
+              <button type="submit" class="form-button">
+                <span class="blind">검색</span>
+              </button>
+            </form>
+          </div>
+          <button class="button-close" type="button">
+            <span class="blind">검색닫기</span>
+            <span class="split_textArea">
+              <span class="word-split_text">
+                <span class="t01 capital-letter">c</span>
+                <span class="t02">l</span>
+                <span class="t03">o</span>
+                <span class="t04">s</span>
+                <span class="t05">e</span>
+              </span>
+              <span class="word-split_textAnimation">
+                <span class="t01 capital-letter">c</span>
+                <span class="t02">l</span>
+                <span class="t03">o</span>
+                <span class="t04">s</span>
+                <span class="t05">e</span>
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </div>
         <button class="button-menu" type="button">
           <span class="blind">전체 메뉴</span>
           <span class="split_textArea">
@@ -271,34 +301,6 @@
               <span class="t02">e</span>
               <span class="t03">n</span>
               <span class="t04">u</span>
-            </span>
-          </span>
-        </button>
-      </div>
-      <div class="form-search-area">
-        <form action="/" class="search-form" role="search">
-          <label for="form-connection" class="blind">검색어</label>
-          <input type="search" id="form-connection" name="query" class="form-input" value="" placeholder="검색어를 입력해주세요.">
-          <button type="submit" class="form-button">
-            <span class="blind">검색</span>
-          </button>
-        </form>
-        <button class="button-close" type="button">
-          <span class="blind">검색닫기</span>
-          <span class="split_textArea">
-            <span class="word-split_text">
-              <span class="t01 capital-letter">c</span>
-              <span class="t02">l</span>
-              <span class="t03">o</span>
-              <span class="t04">s</span>
-              <span class="t05">e</span>
-            </span>
-            <span class="word-split_textAnimation">
-              <span class="t01 capital-letter">c</span>
-              <span class="t02">l</span>
-              <span class="t03">o</span>
-              <span class="t04">s</span>
-              <span class="t05">e</span>
             </span>
           </span>
         </button>
