@@ -85,6 +85,7 @@ body .loading-bar.off {
 
 body {
   overflow: hidden;
+  min-width: 320px;
 }
 
 body .header,
@@ -145,6 +146,12 @@ body .footer {
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 1600px) {
+  [class*="word-split_"] {
+    font-size: 1.125rem;
+  }
+}
+
 .logo {
   display: block;
   position: absolute;
@@ -160,8 +167,15 @@ body .footer {
 @media screen and (max-width: 959px) {
   .logo {
     width: 3.875rem;
-    padding: 0 1.25rem;
-    background-size: auto 1.625rem;
+    padding-inline: 40px;
+    background-size: 68px auto;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .logo {
+    padding-inline: 20px;
+    background-size: 68px auto;
   }
 }
 
@@ -189,9 +203,21 @@ body .footer {
   height: 100%;
 }
 
+@media screen and (max-width: 1600px) {
+  .header {
+    height: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 5rem;
+  }
+}
+
 @media screen and (max-width: 959px) {
   .header {
-    height: 4.25rem;
+    height: 4.375rem;
   }
 }
 
@@ -225,6 +251,12 @@ body .footer {
   align-items: center;
   height: 100%;
   padding: 0 1.5vw;
+}
+
+@media screen and (max-width: 960px) {
+  .gnb-nav .item .link {
+    padding: 0 25px;
+  }
 }
 
 .gnb-nav .item .arrow-active {
@@ -286,6 +318,24 @@ body .footer {
   width: 154px;
   height: 100%;
   padding: 0 2.5rem;
+}
+
+@media screen and (max-width: 960px) {
+  .button-search,
+  .button-close,
+  .button-menu {
+    width: 138px;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .button-search,
+  .button-close,
+  .button-menu {
+    width: auto;
+    padding: 0 20px;
+  }
 }
 
 .search-split_text {
