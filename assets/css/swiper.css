@@ -51,12 +51,6 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 60rem) {
-  .swiper-slider-control {
-    justify-content: space-between;
-  }
-}
-
 .swiper-button-area {
   display: flex;
   position: static;
@@ -123,4 +117,20 @@
   padding: 0;
   font-size: 32px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 60rem) {
+  .swiper-slider-control {
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    top: auto;
+    bottom: 7rem;
+  }
+
+  .swiper-pagination-fraction.swiper-pagination {
+    margin: 0 6rem 0 0;
+  }
 }
