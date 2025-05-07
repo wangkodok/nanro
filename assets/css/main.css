@@ -115,17 +115,27 @@
 
 @media screen and (max-width: 1439px) {}
 
-@media screen and (max-width: 960px) {}
-
-@media screen and (max-width: 719px) {}
-
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
   .sec-visual .title-area {
-    height: 245px;
+    height: 300px;
   }
 
   .sec-visual .title-area .sec-desc {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .sec-visual .title-area {
+    padding: 20px;
+  }
+
+  .sec-visual .title-area .sec-desc {
+    font-size: 30px;
+  }
+
+  .sec-visual .title-area .sec-title {
+    margin-bottom: 14px;
   }
 }
 

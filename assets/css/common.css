@@ -611,6 +611,12 @@ button:hover .word-split_textAnimation [class^="t"] {
   }
 }
 
+@media screen and (max-width: 719px) {
+  .sec-title {
+    font-size: 20px;
+  }
+}
+
 .ff {
   font-family: "CormorantInfant";
 }
@@ -664,13 +670,13 @@ button:hover .word-split_textAnimation [class^="t"] {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
   .animation-horizontal {
-    bottom: 245px;
+    bottom: 300px;
   }
 
   .animation-horizontal .wrap .text {
-    font-size: 150px;
+    font-size: 100px;
     padding: 40px;
   }
 }
